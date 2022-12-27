@@ -7,7 +7,8 @@ qty=[0,0,0,0]
 phase=[None,None,None,None]
 watt=[0.5,0.5,0.5,0.5]
 key_id=0
-if st.button('Done',key='btn_select'):
+button_click=st.button('Done',key='btn_select')
+if button_click:
     if len(appliances)> 1:
         tabs=st.tabs(appliances)
         for i,tab in enumerate(tabs):
