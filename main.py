@@ -3,9 +3,9 @@ import pandas as pd
 st.title('Diesel Generator Size Calculator')
 #name = st.text_input('whats your name', '')
 appliances=st.multiselect("Choose appliances",['Air Conditioner','CF Bulb','Halogen light','Motor'],['CF Bulb'])
-qty=[]
-phase=[]
-watt=[]
+qty=[0,0,0,0]
+phase=[None,None,None,None]
+watt=[0.5,0.5,0.5,0.5]
 if len(appliances)> 1:
     tabs=st.tabs(appliances)
     for i,tab in enumerate(tabs):
