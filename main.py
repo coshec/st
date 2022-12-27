@@ -21,7 +21,7 @@ if st.button('Done'):
 #st.write(f'Hello {name}!')
 # Using object notation
 if st.button('Done'):
-    df=pd.DataFrame('Appliance':appliances,'Qty':qty,'Phase':phase,'Wattage':watt)
+    df=pd.DataFrame({'Appliance':appliances,'Qty':qty,'Phase':phase,'Wattage':watt})
     st.write(df)
     # st.write(phase)
     # st.write(watt)
