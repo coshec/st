@@ -6,13 +6,14 @@ appliances=st.multiselect("Choose appliances",['Air Conditioner','CF Bulb','Halo
 qty=[0,0,0,0]
 phase=[None,None,None,None]
 watt=[0.5,0.5,0.5,0.5]
+key_id=0
 if len(appliances)> 1:
     tabs=st.tabs(appliances)
     for i,tab in enumerate(tabs):
         with tab:
-            qty[i-1] = st.slider('Select quantity', 0, 10, 1,key=appliances[i-1])
-            phase[i-1]=st.radio('Phase',['Single','3-phase'],key=appliances[i-1])
-            watt[i-1]=st.number_input(label='Enter Wattage',key=appliances[i-1])
+            qty[i-1] = st.slider('Select quantity', 0, 10, 1,key=key_id+=1)
+            phase[i-1]=st.radio('Phase',['Single','3-phase'],key=key_id+=1)
+            watt[i-1]=st.number_input(label='Enter Wattage',key=key_id+=1)
 #st.write(f'Hello {name}!')
 # Using object notation
 add_selectbox = st.sidebar.selectbox(
