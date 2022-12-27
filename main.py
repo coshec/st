@@ -10,9 +10,9 @@ if len(appliances)> 1:
     tabs=st.tabs(appliances)
     for i,tab in enumerate(tabs):
         with tab:
-            qty[i-1] = st.slider('Select quantity', 0, 10, 1,key=i-1)
-            phase[i-1]=st.radio('Phase',['Single','3-phase'],key=i-1)
-            watt[i-1]=st.number_input(label='Enter Wattage',key=i-1)
+            qty[i-1] = st.slider('Select quantity', 0, 10, 1,key=appliances[i-1])
+            phase[i-1]=st.radio('Phase',['Single','3-phase'],key=appliances[i-1])
+            watt[i-1]=st.number_input(label='Enter Wattage',key=appliances[i-1])
 #st.write(f'Hello {name}!')
 # Using object notation
 add_selectbox = st.sidebar.selectbox(
