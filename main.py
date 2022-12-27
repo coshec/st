@@ -12,7 +12,7 @@ if len(appliances)> 1:
         with tab:
             qty[i-1] = st.slider('Select quantity', 0, 10, 1)
             phase[i-1]=st.radio('Phase',['Single','3-phase'])
-            watt[i-1]=st.number_input('Enter Wattage',min_value=.5,max_value=120000)
+            watt[i-1]=st.number_input(label='Enter Wattage',min_value=.5,max_value=120000)
 #st.write(f'Hello {name}!')
 # Using object notation
 add_selectbox = st.sidebar.selectbox(
