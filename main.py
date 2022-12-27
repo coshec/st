@@ -7,7 +7,7 @@ qty=[0,0,0,0]
 phase=[None,None,None,None]
 watt=[0.5,0.5,0.5,0.5]
 key_id=0
-if st.button('Done'):
+if st.button('Done',key='btn_select'):
     if len(appliances)> 1:
         tabs=st.tabs(appliances)
         for i,tab in enumerate(tabs):
@@ -20,7 +20,7 @@ if st.button('Done'):
                 watt[i-1]=st.number_input(label='Enter Wattage',key=key_id)
 #st.write(f'Hello {name}!')
 # Using object notation
-if st.button('Done'):
+if st.button('Done',key='btn_data'):
     df=pd.DataFrame({'Appliance':appliances,'Qty':qty,'Phase':phase,'Wattage':watt})
     st.write(df)
     # st.write(phase)
