@@ -19,6 +19,10 @@ if len(appliances)> 1:
             watt[i-1]=st.number_input(label='Enter Wattage',key=key_id)
 #st.write(f'Hello {name}!')
 # Using object notation
+if st.button('Done'):
+    st.write(qty)
+    st.write(phase)
+    st.write(watt)
 add_selectbox = st.sidebar.selectbox(
     "How would you like to be contacted?",
     ("Email", "Home phone", "Mobile phone")
@@ -30,7 +34,7 @@ with st.sidebar:
         "Choose a shipping method",
         ("Standard (5-15 days)", "Express (2-5 days)")
     )
-x = st.slider('Select an integer x', 0, 10, 1)
-y = st.slider('Select an integer y', 0, 10, 1)
-df = pd.DataFrame({'x': [x], 'y': [y] , 'x + y': [x + y]}, index = ['addition row'])
-st.write(df)
+# x = st.slider('Select an integer x', 0, 10, 1)
+# y = st.slider('Select an integer y', 0, 10, 1)
+# df = pd.DataFrame({'x': [x], 'y': [y] , 'x + y': [x + y]}, index = ['addition row'])
+# st.write(df)
