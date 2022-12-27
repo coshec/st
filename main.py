@@ -3,9 +3,16 @@ import pandas as pd
 st.title('Diesel Generator Size Calculator')
 #name = st.text_input('whats your name', '')
 appliances=st.multiselect("Choose appliances",['Air Conditioner','CF Bulb','Halogen light','Motor'],['CF Bulb'])
-
+qty=[]
+phase=[]
+watt=[]
 if len(appliances)> 1:
     tabs=st.tabs(appliances)
+    for i,tab in enumerate(tabs):
+        with tab:
+            qty[i-1] = st.slider('Select quantity', 0, 10, 1)
+            phase[i-1]=st.radio('Phase',['Single','3-phase'])
+            watt[i-1]=st.number_input('Enter Wattage',min_value=.5,max_value=120000)
 #st.write(f'Hello {name}!')
 # Using object notation
 add_selectbox = st.sidebar.selectbox(
